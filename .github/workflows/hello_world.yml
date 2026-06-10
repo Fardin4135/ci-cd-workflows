@@ -2,9 +2,9 @@ name: "creating the workflow for printing hellow world, date on push"
 
 on:
     push:
-        branches:
-            - master
-            - production
+        # branches:
+        #     - master
+        #     - production
 
 jobs:
     hello_world:
@@ -14,4 +14,10 @@ jobs:
               run: echo "Hello world"
             - name: "Printing todays date"
               run: date
+    
+    current_directory:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "printing current directory"
+              run: pwd
 
